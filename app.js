@@ -14,7 +14,7 @@ downloadVideoBtn.addEventListener("click", () => {
 });
 
 let sendURL = (URL) =>
-  (location.href = `https://ahmedsallam100.github.io/index.html?URL=${URL}`);
+  (location.href = `${window.location.href}/index.html?URL=${URL}`);
 downloadthumBtn.addEventListener("click", () => {
   var query = urlInput.value;
   if (urlInput.value == "") {
