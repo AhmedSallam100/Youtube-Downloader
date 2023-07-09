@@ -1,8 +1,8 @@
-let downloadVideoBtn = document.querySelector(".download-video");
-let urlInput = document.querySelector(".url-input");
-let downloadthumBtn = document.querySelector(".download-thumbnail");
-let imgs = document.querySelectorAll(".img-container img");
-let output = document.querySelector(".img-cont");
+let downloadVideoBtn = document.querySelector(".download-video"),
+  urlInput = document.querySelector(".url-input"),
+  downloadthumBtn = document.querySelector(".download-thumbnail"),
+  imgs = document.querySelectorAll(".img-container img"),
+  output = document.querySelector(".img-cont");
 
 downloadVideoBtn.addEventListener("click", () => {
   if (urlInput.value == "") {
@@ -13,10 +13,8 @@ downloadVideoBtn.addEventListener("click", () => {
   }
 });
 
-let sendURL = (URL) => {
-  window.location.href = `http://localhost:9000/index.html?URL=${URL}`;
-};
-
+let sendURL = (URL) =>
+  (location.href = `https://ahmedsallam100.github.io/index.html?URL=${URL}`);
 downloadthumBtn.addEventListener("click", () => {
   var query = urlInput.value;
   if (urlInput.value == "") {
@@ -42,8 +40,8 @@ downloadthumBtn.addEventListener("click", () => {
 });
 
 var preview = (v) => {
-  var id = document.querySelector(".img-cont").caption;
-  var a = document.createElement("a");
+  var id = document.querySelector(".img-cont").caption,
+    a = document.createElement("a");
   a.target = "_blank";
   if (v == 1) {
     a.href = `https://img.youtube.com/vi/${id}/mqdefault.jpg`;
